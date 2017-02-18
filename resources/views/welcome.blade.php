@@ -21,6 +21,7 @@
     </head>
     <body>
         <div class="container">
+            <h1>Laravel 5.1, VueJS 1.0</h1>
             <table class="table table-condensed table-hover">
                 <thead>
                     <tr>

@@ -19,3 +19,22 @@ $factory->define(App\Model\Lesson1::class, function (Faker\Generator $faker) {
         'updated_at'=>Carbon::now(),
     ];
 });
+
+$factory->define(App\Model\Lesson6::class, function (Faker\Generator $faker) {
+    return [
+        'column1' => $faker->name,
+        'column2' => $faker->name,
+        'column3' => $faker->name,
+        'column4' => $faker->name,
+    ];
+});
+
+$factory->define(App\Model\Lesson7::class, function (Faker\Generator $faker) {
+    return [
+        'column1' => $faker->name,
+        'column2' => $faker->name,
+        'column3' => $faker->name,
+        'column4' => $faker->name,
+        'column5' => $faker->name,
+    ];
+});

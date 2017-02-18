@@ -35,23 +35,33 @@ class WelcomeController extends Controller
             ],
             'lesson3'=>[
                 'name'=>'Lesson 3',
-                'description'=>'Form Submit With Validation (Local)',
+                'description'=>'Form Submit With Validation',
                 'link'=>route('lesson3.index'),
             ],
             'lesson4'=>[
                 'name'=>'Lesson 4',
-                'description'=>'Form Submit With Validation (Global)',
+                'description'=>'Form Submit With Different Inputs (Simple)',
                 'link'=>route('lesson4.index'),
             ],
             'lesson5'=>[
                 'name'=>'Lesson 5',
-                'description'=>'sdf',
-                'link'=>'sdf',
+                'description'=>'Multiple Selection',
+                'link'=>route('lesson5.index'),
             ],
             'lesson6'=>[
                 'name'=>'Lesson 6',
-                'description'=>'sdf',
-                'link'=>'sdf',
+                'description'=>'DataTables',
+                'link'=>route('lesson6.index'),
+            ],
+            'lesson7'=>[
+                'name'=>'Lesson 7',
+                'description'=>'DataTables ( Server-side )',
+                'link'=>route('lesson7.index'),
+            ],
+            'lesson8'=>[
+                'name'=>'Lesson 8',
+                'description'=>'VueJS Introduction',
+                'link'=>route('lesson8.index'),
             ],
         ];
     }
