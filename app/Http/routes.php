@@ -52,6 +52,7 @@ Route::post('lesson9', array('as' => 'lesson9.store', 'uses' => 'Lesson9Controll
 
 // Lesson10
 Route::get('lesson10', array('as' => 'lesson10.index', 'uses' => 'Lesson10Controller@index'));
+Route::post('lesson10', array('as' => 'lesson10.store', 'uses' => 'Lesson10Controller@store'));
 
 
 

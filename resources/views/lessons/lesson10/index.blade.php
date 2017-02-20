@@ -1,7 +1,7 @@
 @include('lessons.partials.bootstrap')
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.28-csp/vue.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/0.1.17/vue-resource.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.15.3/axios.min.js"></script>
 
 <div class="container" id="module">
 	<div class="row">
@@ -54,7 +54,6 @@
 <script type="text/javascript">
 	$(function() {
 		//CSRF Token
-		Vue.http.headers.common['X-CSRF-TOKEN'] = '{{csrf_token()}}';
 		var vm = new Vue({
 			el:'#module',
 			data:{
@@ -74,13 +73,15 @@
 						return;
 					}
 
-				    this.$http.post('{{ route("lesson9.store") }}',this.postdata, function(results) {
-				    	if(results.success) {
+					axios.post('{{ route("lesson10.store") }}', this.postdata)
+					.then(function (response) {
+						if(response.data.success) {
 				    		location.reload();
 				    	}
-				    }).error(function(data) {
-				    	console.log(data);
-				    });
+					})
+					.catch(function (error) {
+						console.log(error);
+					});
 				}
 			},
 		});
