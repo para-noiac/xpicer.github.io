@@ -63,6 +63,16 @@ class WelcomeController extends Controller
                 'description'=>'VueJS Introduction',
                 'link'=>route('lesson8.index'),
             ],
+            'lesson9'=>[
+                'name'=>'Lesson 9',
+                'description'=>'VueAjax (Vue-resource, deprecated, using for current projects)',
+                'link'=>route('lesson9.index'),
+            ],
+            'lesson10'=>[
+                'name'=>'Lesson 10',
+                'description'=>'VueAjax (Axios, using for new projects)',
+                'link'=>route('lesson10.index'),
+            ],
         ];
     }
 }

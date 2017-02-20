@@ -45,3 +45,14 @@ Route::post('lesson7/data', array('as' => 'lesson7.data', 'uses' => 'Lesson7Cont
 
 // Lesson8
 Route::get('lesson8', array('as' => 'lesson8.index', 'uses' => 'Lesson8Controller@index'));
+
+// Lesson9
+Route::get('lesson9', array('as' => 'lesson9.index', 'uses' => 'Lesson9Controller@index'));
+Route::post('lesson9', array('as' => 'lesson9.store', 'uses' => 'Lesson9Controller@store'));
+
+// Lesson10
+Route::get('lesson10', array('as' => 'lesson10.index', 'uses' => 'Lesson10Controller@index'));
+
+
+
+
