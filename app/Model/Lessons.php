@@ -77,7 +77,7 @@ class Lessons
             'lesson12'=>[
                 'name'=>'Lesson 12',
                 'description'=>'Upload Images / PDF (DropZoneJS)',
-                'link'=>route('lesson11.index'),
+                'link'=>route('lesson12.index'),
             ],
         ];
 	}

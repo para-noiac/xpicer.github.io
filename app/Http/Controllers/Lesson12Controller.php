@@ -4,12 +4,12 @@ namespace App\Http\Controllers;
 
 use File;
 use Storage;
-use App\Model\Lesson11;
+use App\Model\Lesson12;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class Lesson11Controller extends Controller
+class Lesson12Controller extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,8 +18,8 @@ class Lesson11Controller extends Controller
      */
     public function index()
     {
-        $records = Lesson11::all();
-        return view('lessons.lesson11.index',compact('records'));
+        $records = Lesson12::all();
+        return view('lessons.lesson12.index',compact('records'));
     }
 
     /**
@@ -30,20 +30,19 @@ class Lesson11Controller extends Controller
      */
     public function store(Request $request)
     {
-        if($request->uploadedfile) {
-            $record = new Lesson11;
-            $record->name = $request->uploadedfile->getClientOriginalName();
-            $record->path = 'lesson11/'.$request->uploadedfile->getClientOriginalName();
+        if($request->file) {
+            $record = new Lesson12;
+            $record->name = $request->file->getClientOriginalName();
+            $record->path = 'lesson12/'.$request->file->getClientOriginalName();
             $record->save();
-            Storage::put($record->path,File::get($request->uploadedfile));
+            Storage::put($record->path,File::get($request->file));
+            return ["success"=>true];
         }
-
-        return redirect(route('lesson11.index'));
     }
 
     public function show($id)
     {
-        $record = Lesson11::find($id);
+        $record = Lesson12::find($id);
 
         return response(Storage::get($record->path), 200)->header('Content-Type', mime_content_type(storage_path()."/app/".$record->path));
     }

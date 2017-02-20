@@ -39,7 +39,7 @@
 				<td>{{$row->path}}</td>
 				<td>{{$row->created_at}}</td>
 				<td>{{$row->updated_at}}</td>
-				<td><a type="button" class="btn btn-default" href="{{route('lesson11.view',$row->id)}}" target="_blank">View</a></td>
+				<td><a type="button" class="btn btn-default" href="{{route('lesson11.show',$row->id)}}" target="_blank">View</a></td>
 			</tr>
 			@endforeach
 		</tbody>

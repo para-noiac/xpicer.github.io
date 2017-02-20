@@ -57,6 +57,10 @@ Route::post('lesson10', array('as' => 'lesson10.store', 'uses' => 'Lesson10Contr
 // Lesson11
 Route::get('lesson11', array('as' => 'lesson11.index', 'uses' => 'Lesson11Controller@index'));
 Route::post('lesson11', array('as' => 'lesson11.store', 'uses' => 'Lesson11Controller@store'));
-Route::get('lesson11/view/{id?}', array('as' => 'lesson11.view', 'uses' => 'Lesson11Controller@view'));
+Route::get('lesson11/{id}', array('as' => 'lesson11.show', 'uses' => 'Lesson11Controller@show'));
 
+// Lesson12
+Route::get('lesson12', array('as' => 'lesson12.index', 'uses' => 'Lesson12Controller@index'));
+Route::post('lesson12', array('as' => 'lesson12.store', 'uses' => 'Lesson12Controller@store'));
+Route::get('lesson12/{id}', array('as' => 'lesson12.show', 'uses' => 'Lesson12Controller@show'));
 
