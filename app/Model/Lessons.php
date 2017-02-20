@@ -51,7 +51,7 @@ class Lessons
             ],
             'lesson7'=>[
                 'name'=>'Lesson 7',
-                'description'=>'DataTables ( Server-side )',
+                'description'=>'DataTables (Server-side)',
                 'link'=>route('lesson7.index'),
             ],
             'lesson8'=>[
@@ -68,6 +68,16 @@ class Lessons
                 'name'=>'Lesson 10',
                 'description'=>'VueAjax (Axios, using for new projects)',
                 'link'=>route('lesson10.index'),
+            ],
+            'lesson11'=>[
+                'name'=>'Lesson 11',
+                'description'=>'Upload Images / PDF (Single, Form Submit)',
+                'link'=>route('lesson11.index'),
+            ],
+            'lesson12'=>[
+                'name'=>'Lesson 12',
+                'description'=>'Upload Images / PDF (DropZoneJS)',
+                'link'=>route('lesson11.index'),
             ],
         ];
 	}

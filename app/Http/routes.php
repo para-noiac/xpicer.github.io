@@ -54,6 +54,9 @@ Route::post('lesson9', array('as' => 'lesson9.store', 'uses' => 'Lesson9Controll
 Route::get('lesson10', array('as' => 'lesson10.index', 'uses' => 'Lesson10Controller@index'));
 Route::post('lesson10', array('as' => 'lesson10.store', 'uses' => 'Lesson10Controller@store'));
 
-
+// Lesson11
+Route::get('lesson11', array('as' => 'lesson11.index', 'uses' => 'Lesson11Controller@index'));
+Route::post('lesson11', array('as' => 'lesson11.store', 'uses' => 'Lesson11Controller@store'));
+Route::get('lesson11/view/{id?}', array('as' => 'lesson11.view', 'uses' => 'Lesson11Controller@view'));
 
 
