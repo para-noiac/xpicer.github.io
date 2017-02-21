@@ -79,6 +79,26 @@ class Lessons
                 'description'=>'Upload Images / PDF (DropZoneJS)',
                 'link'=>route('lesson12.index'),
             ],
+            'lesson13'=>[
+                'name'=>'Lesson 13',
+                'description'=>'Tooltips',
+                // 'link'=>route('lesson13.index'),
+            ],
+            'lesson14'=>[
+                'name'=>'Lesson 14',
+                'description'=>'Nested Sortable Lists',
+                // 'link'=>route('lesson14.index'),
+            ],
+            'lesson15'=>[
+                'name'=>'Lesson 15',
+                'description'=>'Import Preview',
+                // 'link'=>route('lesson15.index'),
+            ],
+            'lesson16'=>[
+                'name'=>'Lesson 16',
+                'description'=>'Eloquent',
+                // 'link'=>route('lesson16.index'),
+            ],
         ];
 	}
 }

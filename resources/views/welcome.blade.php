@@ -35,7 +35,11 @@
                     <tr>
                         <td>{{$row["name"]}}</td>
                         <td>{{$row["description"]}}</td>
-                        <td><a class="btn btn-link" target="_blank" href="{{$row["link"]}}" role="button">{{$row["link"]}}</a></td>
+                        <td>
+                            @if(isset($row["link"]))
+                                <a class="btn btn-link" target="_blank" href="{{$row["link"]}}" role="button">{{$row["link"]}}</a>
+                            @endif
+                        </td>
                     </tr>
                     @endforeach
                 </tbody>
