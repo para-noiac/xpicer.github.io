@@ -81,16 +81,22 @@ class Lessons
             ],
             'lesson13'=>[
                 'name'=>'Lesson 13',
-                'description'=>'Tooltips',
-                // 'link'=>route('lesson13.index'),
+                'description'=>'Tooltips & Popover',
+                'link'=>route('lesson13.index'),
             ],
             'lesson14'=>[
                 'name'=>'Lesson 14',
-                'description'=>'Nested Sortable Lists',
+                'description'=>'Nested Sortable Lists - Single Level, Sorting',
                 // 'link'=>route('lesson14.index'),
             ],
             'lesson15'=>[
                 'name'=>'Lesson 15',
+                'description'=>'Nested Sortable Lists - Multi Level',
+                'link'=>route('lesson15.index'),
+            ],
+            
+            'lesson16'=>[
+                'name'=>'Lesson 16',
                 'description'=>'Import Preview',
                 // 'link'=>route('lesson15.index'),
             ],

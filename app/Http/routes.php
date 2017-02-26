@@ -64,3 +64,14 @@ Route::get('lesson12', array('as' => 'lesson12.index', 'uses' => 'Lesson12Contro
 Route::post('lesson12', array('as' => 'lesson12.store', 'uses' => 'Lesson12Controller@store'));
 Route::get('lesson12/{id}', array('as' => 'lesson12.show', 'uses' => 'Lesson12Controller@show'));
 
+// Lesson13
+Route::get('lesson13', array('as' => 'lesson13.index', 'uses' => 'Lesson13Controller@index'));
+
+// Lesson14
+Route::get('lesson14', array('as' => 'lesson14.index', 'uses' => 'Lesson14Controller@index'));
+Route::post('lesson14', array('as' => 'lesson14.store', 'uses' => 'Lesson14Controller@store'));
+
+// Lesson15
+Route::get('lesson15', array('as' => 'lesson15.index', 'uses' => 'Lesson15Controller@index'));
+Route::post('lesson15', array('as' => 'lesson15.store', 'uses' => 'Lesson15Controller@store'));
+Route::post('lesson15/storelevel', array('as' => 'lesson15.storelevel', 'uses' => 'Lesson15Controller@storelevel'));

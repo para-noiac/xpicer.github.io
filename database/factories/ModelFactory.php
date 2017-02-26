@@ -38,3 +38,9 @@ $factory->define(App\Model\Lesson7::class, function (Faker\Generator $faker) {
         'column5' => $faker->name,
     ];
 });
+
+$factory->define(App\Model\Lesson15::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->name,
+    ];
+});
