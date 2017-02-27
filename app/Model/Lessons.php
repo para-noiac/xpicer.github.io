@@ -86,12 +86,12 @@ class Lessons
             ],
             'lesson14'=>[
                 'name'=>'Lesson 14',
-                'description'=>'Nested Sortable Lists - Single Level, Sorting',
-                // 'link'=>route('lesson14.index'),
+                'description'=>'Sortable Lists - Single Level',
+                'link'=>route('lesson14.index'),
             ],
             'lesson15'=>[
                 'name'=>'Lesson 15',
-                'description'=>'Nested Sortable Lists - Multi Level',
+                'description'=>'Nested Sortable Lists - Multi Level, Sorting',
                 'link'=>route('lesson15.index'),
             ],
             

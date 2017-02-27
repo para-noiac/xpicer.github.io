@@ -4,7 +4,7 @@ namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Lesson15 extends Model
+class Lesson14 extends Model
 {
 	// By Laravel default you do not have to put this. It will auto-linked.
 	// I place it here because of Retail Portal.
@@ -15,24 +15,14 @@ class Lesson15 extends Model
 	 * Indicates if the model should be timestamped.
 	 *
 	 */
-	protected $table      = 'lesson15';
+	protected $table      = 'lesson14';
 	protected $connection = 'mysql';
 	public    $timestamps = true;
 
 	protected $fillable = [];
 
-	public function scopeToplevel($query)
-	{
-		return $query->where('parent_id',0)->ordered();
-	}
 	public function scopeOrdered($query,$order = 'asc')
 	{
 		return $query->orderBy('order',$order);	
 	}
-
-	public function childs()
-	{
-		return $this->hasMany('App\Model\Lesson15','parent_id','id')->ordered();
-	}
-
 }

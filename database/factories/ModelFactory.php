@@ -39,6 +39,12 @@ $factory->define(App\Model\Lesson7::class, function (Faker\Generator $faker) {
     ];
 });
 
+$factory->define(App\Model\Lesson14::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->name,
+    ];
+});
+
 $factory->define(App\Model\Lesson15::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,

@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Lesson15 extends Migration
+class Lesson14 extends Migration
 {
     /**
      * Run the migrations.
@@ -12,10 +12,9 @@ class Lesson15 extends Migration
      */
     public function up()
     {
-        Schema::create('lesson15', function (Blueprint $table) {
+        Schema::create('lesson14', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->integer('parent_id');
             $table->integer('order');
             $table->timestamps();
         });
@@ -28,6 +27,6 @@ class Lesson15 extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('lesson15');
+        Schema::dropIfExists('lesson14');
     }
 }

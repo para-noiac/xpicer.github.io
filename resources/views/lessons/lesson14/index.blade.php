@@ -7,18 +7,21 @@
 
 
 <div class="container" id="module">
-	<form action="{{ route("lesson15.store") }}" method="POST" role="form" id="form_module">
+	<form action="{{ route("lesson14.store") }}" method="POST" role="form" id="form_module">
 		{{ csrf_field() }}
 		{{-- Unable To use VueJS, too slow --}}
 		<input type="hidden" name="action" id="action">
-		<input type="text" name="randomtext" class="form-control" v-model="randomtext" v-on:keydown.enter.prevent="onSubmit('add')">
 		<br>
 		<button type="button" name="action" value="nest" class="btn btn-xs btn-success" v-on:click.prevent="onSave">Save</button>
-		<button type="button" class="btn btn-xs btn-danger" v-on:click.prevent="onSubmit('reset')">Reset</button>
+		<button type="button" class="btn btn-xs btn-danger" v-on:click.prevent="onReset">Reset</button>
 	
 		<ol class="sortable">
 			@foreach($records as $row)
-				@include('lessons.lesson15.partial', $row)
+			<li id="sub_{{ $row->id }}" class="pointer">
+				<div>
+					{{$row->name}}
+				</div>
+			</li>
 			@endforeach
 		</ol>
 	</form>
@@ -34,19 +37,16 @@
 		var vm = new Vue({
 			el:'#module',
 			data:{
-				randomtext:'',
+
 			},
 			methods:{
-				onSubmit: function (action) {
-					if(action == 'add' && this.randomtext || action=='reset') {
-						$('#action').val(action);
-						$('#form_module').submit();
-					}
-					this.randomtext = '';
+				onReset: function () {
+					$('#action').val('reset');
+					$('#form_module').submit();
 				},
 				onSave: function () {
 					var data = $('.sortable').nestedSortable('toHierarchy');
-					this.$http.post('{{ route("lesson15.store") }}',{data:data,action:'nest'}, function(results) {
+					this.$http.post('{{ route("lesson14.store") }}',{data:data,action:'nest'}, function(results) {
 				    	if(results.success) {
 				    		location.reload();
 				    	}

@@ -29,33 +29,61 @@ class Lesson15Controller extends Controller
      */
     public function store(Request $request)
     {
+        switch ($request->action) {
+            case 'add':
+                return $this->saveadd($request);
+                break;
+            case 'nest':
+                return $this->savenest($request);
+                break;
+            case 'reset':
+                return $this->savereset($request);
+                break;
+        }
+        return redirect(route('lesson15.index'));
+    }
+
+    protected function savereset(Request $request)
+    {
+        Lesson15::where('parent_id','!=',0)->update(['parent_id'=>0]);
+        Lesson15::where('order','!=',0)->update(['order'=>0]);
+
+        return redirect(route('lesson15.index'));
+    }
+
+    protected function saveadd(Request $request)
+    {
         $record = new Lesson15;
         $record->name = $request->randomtext;
         $result = $record->save();
 
         if($result) {
-            return ['success'=>true];
+            return redirect(route('lesson15.index'));
         }
     }
-    public function storelevel(Request $request)
+
+    protected function savenest(Request $request)
     {
         $this->savechild($request->data);
+
         return ['success'=>true];
     }
 
     protected function savechild($data,$parent_id = 0)
     {
         foreach ($data as $key => $row) {
+            $record = Lesson15::find($row["id"]);
+            if($record->parent_id != $parent_id) {
+                $record->parent_id = $parent_id;
+            }
+            if($record->order != $key) {
+                $record->order = $key;
+            }
+            $record->save();
             if(isset($row["children"])) {
-                $this->savechild($row["children"],$row["id"]);
+                $this->savechild($row["children"],$row["id"]);    
             }
-            else {
-                $record = Lesson15::find($row["id"]);
-                if($record->parent_id != $parent_id) {
-                    $record->parent_id = $parent_id;
-                    $record->save();
-                }
-            }
+            
         }
     }
 }
